@@ -1,0 +1,16 @@
+[package]
+name = "counter-program"
+version = "0.1.0"
+edition = "2021"
+description = "A simple Solana counter program for learning purposes"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+solana-program = "1.17.0"
+borsh = "0.10.3"
+thiserror = "1.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
