@@ -154,12 +154,11 @@ Throughout the series, you'll build the following projects with increasing compl
    RUST
 
    ```bash
-
-  curl --proto '=https' --tlsv1.2 -sSf <https://sh.rustup.rs> | sh -s -- -y
-
+   curl --proto '=https' --tlsv1.2 -sSf <https://sh.rustup.rs> | sh -s -- -y
    ```
 
 2. **Install Node.js and npm**
+
    ```bash
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
    command -v nvm
@@ -172,12 +171,10 @@ Throughout the series, you'll build the following projects with increasing compl
 3. **Install Anchor**
 
    ```bash
-    cargo install --git https://github.com/coral-xyz/anchor avm --force
+   cargo install --git https://github.com/coral-xyz/anchor avm --force
    avm --version
    avm install latest
-
    avm use latest
-
    ```
 
 4. **Clone this repository**
