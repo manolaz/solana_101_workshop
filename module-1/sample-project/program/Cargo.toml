@@ -1,0 +1,23 @@
+[package]
+name = "hello_solana"
+version = "0.1.0"
+edition = "2021"
+description = "A simple hello world Solana program"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+borsh = "0.10.0"
+borsh-derive = "0.10.0"
+solana-program = "1.17.0"
+
+[dev-dependencies]
+solana-program-test = "1.17.0"
+solana-sdk = "1.17.0"
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+opt-level = 3
