@@ -106,21 +106,25 @@ This workshop series will guide you through building decentralized applications 
 Throughout the series, you'll build the following projects with increasing complexity:
 
 ### 1. Personal Token (SPL Token)
+
 - Create your own fungible token on Solana
 - Implement minting, burning, and transfer functionality
 - Set up token metadata and images
 
 ### 2. NFT Marketplace
+
 - Design NFT collection and metadata
 - Build listing, purchasing, and bidding functionality
 - Implement royalties and marketplace fees
 
 ### 3. DAO Voting System
+
 - Create governance token and distribution mechanism
 - Implement proposal creation and voting logic
 - Build treasury management functionality
 
 ### 4. DeFi Lending Protocol
+
 - Design token vaults and interest rate models
 - Implement collateralization and liquidation mechanisms
 - Create borrowing and repayment functionality
@@ -130,7 +134,7 @@ Throughout the series, you'll build the following projects with increasing compl
 - Basic programming knowledge (any language)
 - Fundamental understanding of blockchain concepts
 - Development environment with:
-  - Node.js v16+ and npm
+  - Node.js v22+ and npm
   - Rust installed via rustup
   - Git for version control
   - Code editor (VS Code recommended with Solana extensions)
@@ -138,24 +142,46 @@ Throughout the series, you'll build the following projects with increasing compl
 ## Setup Instructions
 
 1. **Install Rust and Solana CLI**
+
    ```bash
-   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-   sh -c "$(curl -sSfL https://release.solana.com/v1.16.5/install)"
+   sudo apt-get install -y \
+    build-essential \
+    pkg-config \
+    libudev-dev llvm libclang-dev \
+    protobuf-compiler libssl-dev
+   ```
+
+   RUST
+
+   ```bash
+
+  curl --proto '=https' --tlsv1.2 -sSf <https://sh.rustup.rs> | sh -s -- -y
+
    ```
 
 2. **Install Node.js and npm**
    ```bash
-   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-   nvm install 16
-   nvm use 16
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+   command -v nvm
+   nvm install node
+   node --version
+   npm install --global yarn
+   yarn --version
    ```
 
 3. **Install Anchor**
+
    ```bash
-   npm install -g @coral-xyz/anchor-cli
+    cargo install --git https://github.com/coral-xyz/anchor avm --force
+   avm --version
+   avm install latest
+
+   avm use latest
+
    ```
 
 4. **Clone this repository**
+
    ```bash
    git clone https://github.com/yourusername/solana_101_workshop.git
    cd solana_101_workshop
@@ -164,17 +190,20 @@ Throughout the series, you'll build the following projects with increasing compl
 ## Resources
 
 ### Documentation
+
 - [Solana Developer Documentation](https://docs.solana.com/)
 - [Anchor Framework Documentation](https://www.anchor-lang.com/)
 - [Seahorse Documentation](https://seahorse-lang.org/)
 - [Solana Cookbook](https://solanacookbook.com/)
 
 ### Community
+
 - [Solana Stack Exchange](https://solana.stackexchange.com/)
 - [Solana Discord](https://discord.com/invite/solana)
 - [Anchor Discord](https://discord.com/invite/PDeRXyVURd)
 
 ### Tools
+
 - [Solana Playground](https://beta.solpg.io/)
 - [Solana Explorer](https://explorer.solana.com/)
 - [Phantom Wallet](https://phantom.app/)
